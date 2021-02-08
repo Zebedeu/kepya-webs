@@ -32,7 +32,7 @@ if ( version_compare( $GLOBALS['wp_version'], '4.4-alpha', '<' ) ) {
 	require get_template_directory() . '/inc/back-compat.php';
 }
 
-if ( ! function_exists( 'kepya_setup' ) ) :
+if ( ! function_exists( 'twentysixteen_setup' ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
 	 *
@@ -40,18 +40,18 @@ if ( ! function_exists( 'kepya_setup' ) ) :
 	 * runs before the init hook. The init hook is too late for some features, such
 	 * as indicating support for post thumbnails.
 	 *
-	 * Create your own kepya_setup() function to override in a child theme.
+	 * Create your own twentysixteen_setup() function to override in a child theme.
 	 *
 	 * @since Twenty Sixteen 1.0
 	 */
-	function kepya_setup() {
+	function twentysixteen_setup() {
 		/*
 		 * Make theme available for translation.
-		 * Translations can be filed at WordPress.org. See: https://translate.wordpress.org/projects/wp-themes/kepya
+		 * Translations can be filed at WordPress.org. See: https://translate.wordpress.org/projects/wp-themes/twentysixteen
 		 * If you're building a theme based on Twenty Sixteen, use a find and replace
-		 * to change 'kepya' to the name of your theme in all the template files
+		 * to change 'twentysixteen' to the name of your theme in all the template files
 		 */
-		load_theme_textdomain( 'kepya' );
+		load_theme_textdomain( 'twentysixteen' );
 
 		// Add default posts and comments RSS feed links to head.
 		add_theme_support( 'automatic-feed-links' );
@@ -89,8 +89,8 @@ if ( ! function_exists( 'kepya_setup' ) ) :
 		// This theme uses wp_nav_menu() in two locations.
 		register_nav_menus(
 			array(
-				'primary' => __( 'Primary Menu', 'kepya' ),
-				'social'  => __( 'Social Links Menu', 'kepya' ),
+				'primary' => __( 'Primary Menu', 'twentysixteen' ),
+				'social'  => __( 'Social Links Menu', 'twentysixteen' ),
 			)
 		);
 
@@ -135,7 +135,7 @@ if ( ! function_exists( 'kepya_setup' ) ) :
 		 * This theme styles the visual editor to resemble the theme style,
 		 * specifically font, colors, icons, and column width.
 		 */
-		add_editor_style( array( 'css/editor-style.css', kepya_fonts_url() ) );
+		add_editor_style( array( 'css/editor-style.css', twentysixteen_fonts_url() ) );
 
 		// Load regular editor styles into the new block-based editor.
 		add_theme_support( 'editor-styles' );
@@ -151,62 +151,62 @@ if ( ! function_exists( 'kepya_setup' ) ) :
 			'editor-color-palette',
 			array(
 				array(
-					'name'  => __( 'Dark Gray', 'kepya' ),
+					'name'  => __( 'Dark Gray', 'twentysixteen' ),
 					'slug'  => 'dark-gray',
 					'color' => '#1a1a1a',
 				),
 				array(
-					'name'  => __( 'Medium Gray', 'kepya' ),
+					'name'  => __( 'Medium Gray', 'twentysixteen' ),
 					'slug'  => 'medium-gray',
 					'color' => '#686868',
 				),
 				array(
-					'name'  => __( 'Light Gray', 'kepya' ),
+					'name'  => __( 'Light Gray', 'twentysixteen' ),
 					'slug'  => 'light-gray',
 					'color' => '#e5e5e5',
 				),
 				array(
-					'name'  => __( 'White', 'kepya' ),
+					'name'  => __( 'White', 'twentysixteen' ),
 					'slug'  => 'white',
 					'color' => '#fff',
 				),
 				array(
-					'name'  => __( 'Blue Gray', 'kepya' ),
+					'name'  => __( 'Blue Gray', 'twentysixteen' ),
 					'slug'  => 'blue-gray',
 					'color' => '#4d545c',
 				),
 				array(
-					'name'  => __( 'Bright Blue', 'kepya' ),
+					'name'  => __( 'Bright Blue', 'twentysixteen' ),
 					'slug'  => 'bright-blue',
 					'color' => '#007acc',
 				),
 				array(
-					'name'  => __( 'Light Blue', 'kepya' ),
+					'name'  => __( 'Light Blue', 'twentysixteen' ),
 					'slug'  => 'light-blue',
 					'color' => '#9adffd',
 				),
 				array(
-					'name'  => __( 'Dark Brown', 'kepya' ),
+					'name'  => __( 'Dark Brown', 'twentysixteen' ),
 					'slug'  => 'dark-brown',
 					'color' => '#402b30',
 				),
 				array(
-					'name'  => __( 'Medium Brown', 'kepya' ),
+					'name'  => __( 'Medium Brown', 'twentysixteen' ),
 					'slug'  => 'medium-brown',
 					'color' => '#774e24',
 				),
 				array(
-					'name'  => __( 'Dark Red', 'kepya' ),
+					'name'  => __( 'Dark Red', 'twentysixteen' ),
 					'slug'  => 'dark-red',
 					'color' => '#640c1f',
 				),
 				array(
-					'name'  => __( 'Bright Red', 'kepya' ),
+					'name'  => __( 'Bright Red', 'twentysixteen' ),
 					'slug'  => 'bright-red',
 					'color' => '#ff675f',
 				),
 				array(
-					'name'  => __( 'Yellow', 'kepya' ),
+					'name'  => __( 'Yellow', 'twentysixteen' ),
 					'slug'  => 'yellow',
 					'color' => '#ffef8e',
 				),
@@ -216,8 +216,8 @@ if ( ! function_exists( 'kepya_setup' ) ) :
 		// Indicate widget sidebars can use selective refresh in the Customizer.
 		add_theme_support( 'customize-selective-refresh-widgets' );
 	}
-endif; // kepya_setup
-add_action( 'after_setup_theme', 'kepya_setup' );
+endif; // twentysixteen_setup
+add_action( 'after_setup_theme', 'twentysixteen_setup' );
 
 /**
  * Sets the content width in pixels, based on the theme's design and stylesheet.
@@ -228,10 +228,10 @@ add_action( 'after_setup_theme', 'kepya_setup' );
  *
  * @since Twenty Sixteen 1.0
  */
-function kepya_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'kepya_content_width', 840 );
+function twentysixteen_content_width() {
+	$GLOBALS['content_width'] = apply_filters( 'twentysixteen_content_width', 840 );
 }
-add_action( 'after_setup_theme', 'kepya_content_width', 0 );
+add_action( 'after_setup_theme', 'twentysixteen_content_width', 0 );
 
 /**
  * Add preconnect for Google Fonts.
@@ -242,8 +242,8 @@ add_action( 'after_setup_theme', 'kepya_content_width', 0 );
  * @param string $relation_type  The relation type the URLs are printed.
  * @return array $urls           URLs to print for resource hints.
  */
-function kepya_resource_hints( $urls, $relation_type ) {
-	if ( wp_style_is( 'kepya-fonts', 'queue' ) && 'preconnect' === $relation_type ) {
+function twentysixteen_resource_hints( $urls, $relation_type ) {
+	if ( wp_style_is( 'twentysixteen-fonts', 'queue' ) && 'preconnect' === $relation_type ) {
 		$urls[] = array(
 			'href' => 'https://fonts.gstatic.com',
 			'crossorigin',
@@ -252,7 +252,7 @@ function kepya_resource_hints( $urls, $relation_type ) {
 
 	return $urls;
 }
-add_filter( 'wp_resource_hints', 'kepya_resource_hints', 10, 2 );
+add_filter( 'wp_resource_hints', 'twentysixteen_resource_hints', 10, 2 );
 
 /**
  * Registers a widget area.
@@ -261,12 +261,12 @@ add_filter( 'wp_resource_hints', 'kepya_resource_hints', 10, 2 );
  *
  * @since Twenty Sixteen 1.0
  */
-function kepya_widgets_init() {
+function twentysixteen_widgets_init() {
 	register_sidebar(
 		array(
-			'name'          => __( 'Sidebar', 'kepya' ),
+			'name'          => __( 'Sidebar', 'twentysixteen' ),
 			'id'            => 'sidebar-1',
-			'description'   => __( 'Add widgets here to appear in your sidebar.', 'kepya' ),
+			'description'   => __( 'Add widgets here to appear in your sidebar.', 'twentysixteen' ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
 			'before_title'  => '<h2 class="widget-title">',
@@ -276,9 +276,9 @@ function kepya_widgets_init() {
 
 	register_sidebar(
 		array(
-			'name'          => __( 'Content Bottom 1', 'kepya' ),
+			'name'          => __( 'Content Bottom 1', 'twentysixteen' ),
 			'id'            => 'sidebar-2',
-			'description'   => __( 'Appears at the footer first section on posts and pages.', 'kepya' ),
+			'description'   => __( 'Appears at the footer first section on posts and pages.', 'twentysixteen' ),
 			'before_widget' => '<div class="footer-data">',
 			'after_widget'  => '</div>',
 			'before_title'  => '<h3>',
@@ -288,33 +288,33 @@ function kepya_widgets_init() {
 
 	register_sidebar(
 		array(
-			'name'          => __( 'Content Bottom 2', 'kepya' ),
+			'name'          => __( 'Content Bottom 2', 'twentysixteen' ),
 			'id'            => 'sidebar-3',
-			'description'   => __( 'Appears at the footer second section on posts and pages.', 'kepya' ),
+			'description'   => __( 'Appears at the footer second section on posts and pages.', 'twentysixteen' ),
 		)
 	);
 
     register_sidebar(
         array(
-            'name'          => __( 'Header Top Nav', 'kepya' ),
+            'name'          => __( 'Header Top Nav', 'twentysixteen' ),
             'id'            => 'sidebar-4',
-            'description'   => __( 'Appears at the header with phone number , login & register link', 'kepya' ),
+            'description'   => __( 'Appears at the header with phone number , login & register link', 'twentysixteen' ),
         )
     );
 }
-add_action( 'widgets_init', 'kepya_widgets_init' );
+add_action( 'widgets_init', 'twentysixteen_widgets_init' );
 
-if ( ! function_exists( 'kepya_fonts_url' ) ) :
+if ( ! function_exists( 'twentysixteen_fonts_url' ) ) :
 	/**
 	 * Register Google fonts for Twenty Sixteen.
 	 *
-	 * Create your own kepya_fonts_url() function to override in a child theme.
+	 * Create your own twentysixteen_fonts_url() function to override in a child theme.
 	 *
 	 * @since Twenty Sixteen 1.0
 	 *
 	 * @return string Google fonts URL for the theme.
 	 */
-	function kepya_fonts_url() {
+	function twentysixteen_fonts_url() {
 		$fonts_url = '';
 		$fonts     = array();
 		$subsets   = 'latin,latin-ext';
@@ -323,7 +323,7 @@ if ( ! function_exists( 'kepya_fonts_url' ) ) :
 		 * translators: If there are characters in your language that are not supported
 		 * by Merriweather, translate this to 'off'. Do not translate into your own language.
 		 */
-		if ( 'off' !== _x( 'on', 'Merriweather font: on or off', 'kepya' ) ) {
+		if ( 'off' !== _x( 'on', 'Merriweather font: on or off', 'twentysixteen' ) ) {
 			$fonts[] = 'Merriweather:400,700,900,400italic,700italic,900italic';
 		}
 
@@ -331,7 +331,7 @@ if ( ! function_exists( 'kepya_fonts_url' ) ) :
 		 * translators: If there are characters in your language that are not supported
 		 * by Montserrat, translate this to 'off'. Do not translate into your own language.
 		 */
-		if ( 'off' !== _x( 'on', 'Montserrat font: on or off', 'kepya' ) ) {
+		if ( 'off' !== _x( 'on', 'Montserrat font: on or off', 'twentysixteen' ) ) {
 			$fonts[] = 'Montserrat:400,700';
 		}
 
@@ -339,7 +339,7 @@ if ( ! function_exists( 'kepya_fonts_url' ) ) :
 		 * translators: If there are characters in your language that are not supported
 		 * by Inconsolata, translate this to 'off'. Do not translate into your own language.
 		 */
-		if ( 'off' !== _x( 'on', 'Inconsolata font: on or off', 'kepya' ) ) {
+		if ( 'off' !== _x( 'on', 'Inconsolata font: on or off', 'twentysixteen' ) ) {
 			$fonts[] = 'Inconsolata:400';
 		}
 
@@ -365,28 +365,28 @@ endif;
  *
  * @since Twenty Sixteen 1.0
  */
-function kepya_javascript_detection() {
+function twentysixteen_javascript_detection() {
 	echo "<script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>\n";
 }
-add_action( 'wp_head', 'kepya_javascript_detection', 0 );
+add_action( 'wp_head', 'twentysixteen_javascript_detection', 0 );
 
 /**
  * Enqueues scripts and styles.
  *
  * @since Twenty Sixteen 1.0
  */
-function kepya_scripts() {
+function twentysixteen_scripts() {
 	// Add custom fonts, used in the main stylesheet.
-	wp_enqueue_style( 'kepya-fonts', kepya_fonts_url(), array(), null );
+	wp_enqueue_style( 'twentysixteen-fonts', twentysixteen_fonts_url(), array(), null );
 
 	// Add Genericons, used in the main stylesheet.
 	wp_enqueue_style( 'genericons', get_template_directory_uri() . '/genericons/genericons.css', array(), '3.4.1' );
 
 	// Theme stylesheet.
-	wp_enqueue_style( 'kepya-style', get_stylesheet_uri(), array(), '20190507' );
+	wp_enqueue_style( 'twentysixteen-style', get_stylesheet_uri(), array(), '20190507' );
 
 	// Theme block stylesheet.
-	wp_enqueue_style( 'kepya-block-style', get_template_directory_uri() . '/css/blocks.css', array( 'kepya-style' ), '20190102' );
+	wp_enqueue_style( 'twentysixteen-block-style', get_template_directory_uri() . '/css/blocks.css', array( 'twentysixteen-style' ), '20190102' );
 
     // Theme bootstrap Css.
     wp_enqueue_style( 'kepya-bootstrap-style', get_template_directory_uri() . '/css/bootstrap.min.css',false,'1.1','all');
@@ -402,56 +402,56 @@ function kepya_scripts() {
     wp_enqueue_style( 'kepya-style', get_template_directory_uri() . '/css/style.css',false,'1.1','all');
 
 	// Load the Internet Explorer specific stylesheet.
-	wp_enqueue_style( 'kepya-ie', get_template_directory_uri() . '/css/ie.css', array( 'kepya-style' ), '20170530' );
-	wp_style_add_data( 'kepya-ie', 'conditional', 'lt IE 10' );
+	wp_enqueue_style( 'twentysixteen-ie', get_template_directory_uri() . '/css/ie.css', array( 'twentysixteen-style' ), '20170530' );
+	wp_style_add_data( 'twentysixteen-ie', 'conditional', 'lt IE 10' );
 
 	// Load the Internet Explorer 8 specific stylesheet.
-	wp_enqueue_style( 'kepya-ie8', get_template_directory_uri() . '/css/ie8.css', array( 'kepya-style' ), '20170530' );
-	wp_style_add_data( 'kepya-ie8', 'conditional', 'lt IE 9' );
+	wp_enqueue_style( 'twentysixteen-ie8', get_template_directory_uri() . '/css/ie8.css', array( 'twentysixteen-style' ), '20170530' );
+	wp_style_add_data( 'twentysixteen-ie8', 'conditional', 'lt IE 9' );
 
 	// Load the Internet Explorer 7 specific stylesheet.
-	wp_enqueue_style( 'kepya-ie7', get_template_directory_uri() . '/css/ie7.css', array( 'kepya-style' ), '20170530' );
-	wp_style_add_data( 'kepya-ie7', 'conditional', 'lt IE 8' );
+	wp_enqueue_style( 'twentysixteen-ie7', get_template_directory_uri() . '/css/ie7.css', array( 'twentysixteen-style' ), '20170530' );
+	wp_style_add_data( 'twentysixteen-ie7', 'conditional', 'lt IE 8' );
 
 	// Load the html5 shiv.
-	wp_enqueue_script( 'kepya-html5', get_template_directory_uri() . '/js/html5.js', array(), '3.7.3' );
-	wp_script_add_data( 'kepya-html5', 'conditional', 'lt IE 9' );
+	wp_enqueue_script( 'twentysixteen-html5', get_template_directory_uri() . '/js/html5.js', array(), '3.7.3' );
+	wp_script_add_data( 'twentysixteen-html5', 'conditional', 'lt IE 9' );
 
-	wp_enqueue_script( 'kepya-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20170530', true );
+	wp_enqueue_script( 'twentysixteen-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20170530', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 
 	if ( is_singular() && wp_attachment_is_image() ) {
-		wp_enqueue_script( 'kepya-keyboard-image-navigation', get_template_directory_uri() . '/js/keyboard-image-navigation.js', array( 'jquery' ), '20170530' );
+		wp_enqueue_script( 'twentysixteen-keyboard-image-navigation', get_template_directory_uri() . '/js/keyboard-image-navigation.js', array( 'jquery' ), '20170530' );
 	}
 
-	wp_enqueue_script( 'kepya-script', get_template_directory_uri() . '/js/functions.js', array( 'jquery' ), '20181217', true );
+	wp_enqueue_script( 'twentysixteen-script', get_template_directory_uri() . '/js/functions.js', array( 'jquery' ), '20181217', true );
 
 	wp_localize_script(
-		'kepya-script',
+		'twentysixteen-script',
 		'screenReaderText',
 		array(
-			'expand'   => __( 'expand child menu', 'kepya' ),
-			'collapse' => __( 'collapse child menu', 'kepya' ),
+			'expand'   => __( 'expand child menu', 'twentysixteen' ),
+			'collapse' => __( 'collapse child menu', 'twentysixteen' ),
 		)
 	);
 }
-add_action( 'wp_enqueue_scripts', 'kepya_scripts' );
+add_action( 'wp_enqueue_scripts', 'twentysixteen_scripts' );
 
 /**
  * Enqueue styles for the block-based editor.
  *
  * @since Twenty Sixteen 1.6
  */
-function kepya_block_editor_styles() {
+function twentysixteen_block_editor_styles() {
 	// Block styles.
-	wp_enqueue_style( 'kepya-block-editor-style', get_template_directory_uri() . '/css/editor-blocks.css', array(), '20190102' );
+	wp_enqueue_style( 'twentysixteen-block-editor-style', get_template_directory_uri() . '/css/editor-blocks.css', array(), '20190102' );
 	// Add custom fonts.
-	wp_enqueue_style( 'kepya-fonts', kepya_fonts_url(), array(), null );
+	wp_enqueue_style( 'twentysixteen-fonts', twentysixteen_fonts_url(), array(), null );
 }
-add_action( 'enqueue_block_editor_assets', 'kepya_block_editor_styles' );
+add_action( 'enqueue_block_editor_assets', 'twentysixteen_block_editor_styles' );
 
 /**
  * Adds custom classes to the array of body classes.
@@ -461,7 +461,7 @@ add_action( 'enqueue_block_editor_assets', 'kepya_block_editor_styles' );
  * @param array $classes Classes for the body element.
  * @return array (Maybe) filtered body classes.
  */
-function kepya_body_classes( $classes ) {
+function twentysixteen_body_classes( $classes ) {
 	// Adds a class of custom-background-image to sites with a custom background image.
 	if ( get_background_image() ) {
 		$classes[] = 'custom-background-image';
@@ -484,7 +484,7 @@ function kepya_body_classes( $classes ) {
 
 	return $classes;
 }
-add_filter( 'body_class', 'kepya_body_classes' );
+add_filter( 'body_class', 'twentysixteen_body_classes' );
 
 /**
  * Converts a HEX value to RGB.
@@ -495,7 +495,7 @@ add_filter( 'body_class', 'kepya_body_classes' );
  * @return array Array containing RGB (red, green, and blue) values for the given
  *               HEX code, empty array otherwise.
  */
-function kepya_hex2rgb( $color ) {
+function twentysixteen_hex2rgb( $color ) {
 	$color = trim( $color, '#' );
 
 	if ( strlen( $color ) === 3 ) {
@@ -538,7 +538,7 @@ require get_template_directory() . '/inc/customizer.php';
  *                      values in pixels (in that order).
  * @return string A source size value for use in a content image 'sizes' attribute.
  */
-function kepya_content_image_sizes_attr( $sizes, $size ) {
+function twentysixteen_content_image_sizes_attr( $sizes, $size ) {
 	$width = $size[0];
 
 	if ( 840 <= $width ) {
@@ -559,7 +559,7 @@ function kepya_content_image_sizes_attr( $sizes, $size ) {
 
 	return $sizes;
 }
-add_filter( 'wp_calculate_image_sizes', 'kepya_content_image_sizes_attr', 10, 2 );
+add_filter( 'wp_calculate_image_sizes', 'twentysixteen_content_image_sizes_attr', 10, 2 );
 
 /**
  * Add custom image sizes attribute to enhance responsive image functionality
@@ -572,7 +572,7 @@ add_filter( 'wp_calculate_image_sizes', 'kepya_content_image_sizes_attr', 10, 2 
  * @param array $size Registered image size or flat array of height and width dimensions.
  * @return array The filtered attributes for the image markup.
  */
-function kepya_post_thumbnail_sizes_attr( $attr, $attachment, $size ) {
+function twentysixteen_post_thumbnail_sizes_attr( $attr, $attachment, $size ) {
 	if ( 'post-thumbnail' === $size ) {
 		if ( is_active_sidebar( 'sidebar-1' ) ) {
 			$attr['sizes'] = '(max-width: 709px) 85vw, (max-width: 909px) 67vw, (max-width: 984px) 60vw, (max-width: 1362px) 62vw, 840px';
@@ -582,7 +582,7 @@ function kepya_post_thumbnail_sizes_attr( $attr, $attachment, $size ) {
 	}
 	return $attr;
 }
-add_filter( 'wp_get_attachment_image_attributes', 'kepya_post_thumbnail_sizes_attr', 10, 3 );
+add_filter( 'wp_get_attachment_image_attributes', 'twentysixteen_post_thumbnail_sizes_attr', 10, 3 );
 
 /**
  * Modifies tag cloud widget arguments to display all tags in the same font size
@@ -593,7 +593,7 @@ add_filter( 'wp_get_attachment_image_attributes', 'kepya_post_thumbnail_sizes_at
  * @param array $args Arguments for tag cloud widget.
  * @return array The filtered arguments for tag cloud widget.
  */
-function kepya_widget_tag_cloud_args( $args ) {
+function twentysixteen_widget_tag_cloud_args( $args ) {
 	$args['largest']  = 1;
 	$args['smallest'] = 1;
 	$args['unit']     = 'em';
@@ -601,7 +601,7 @@ function kepya_widget_tag_cloud_args( $args ) {
 
 	return $args;
 }
-add_filter( 'widget_tag_cloud_args', 'kepya_widget_tag_cloud_args' );
+add_filter( 'widget_tag_cloud_args', 'twentysixteen_widget_tag_cloud_args' );
 
 /**** This function is used for remove p tag & br tag from content ***/
 remove_filter('the_content', 'wpautop');

@@ -3,12 +3,12 @@
  */
 
 ( function( $ ) {
-	var style = $( '#kepya-color-scheme-css' ),
+	var style = $( '#twentysixteen-color-scheme-css' ),
 		api = wp.customize;
 
 	if ( ! style.length ) {
-		style = $( 'head' ).append( '<style type="text/css" id="kepya-color-scheme-css" />' )
-		                    .find( '#kepya-color-scheme-css' );
+		style = $( 'head' ).append( '<style type="text/css" id="twentysixteen-color-scheme-css" />' )
+		                    .find( '#twentysixteen-color-scheme-css' );
 	}
 
 	// Site title.

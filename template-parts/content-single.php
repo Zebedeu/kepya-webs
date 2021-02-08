@@ -19,7 +19,7 @@
          <div class="row">
             <!-- post -->
             <div class="post col-md-12">
-               <div class="post-thumbnail"><?php kepya_post_thumbnail(); ?></div>
+               <div class="post-thumbnail"><?php twentysixteen_post_thumbnail(); ?></div>
                <div class="post-details">
                   <div class="post-footer d-flex align-items-center">
                      <?php /*<a href="#" class="author d-flex align-items-center flex-wrap">
@@ -41,11 +41,11 @@
                      
                      wp_link_pages(
                          array(
-                             'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'kepya' ) . '</span>',
+                             'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'twentysixteen' ) . '</span>',
                              'after'       => '</div>',
                              'link_before' => '<span>',
                              'link_after'  => '</span>',
-                             'pagelink'    => '<span class="screen-reader-text">' . __( 'Page', 'kepya' ) . ' </span>%',
+                             'pagelink'    => '<span class="screen-reader-text">' . __( 'Page', 'twentysixteen' ) . ' </span>%',
                              'separator'   => '<span class="screen-reader-text">, </span>',
                          )
                      );
@@ -61,7 +61,7 @@
                          // Parent post navigation.
                          the_post_navigation(
                              array(
-                                 'prev_text' => _x( '<span class="meta-nav">Published in</span><span class="post-title">%title</span>', 'Parent post link', 'kepya' ),
+                                 'prev_text' => _x( '<span class="meta-nav">Published in</span><span class="post-title">%title</span>', 'Parent post link', 'twentysixteen' ),
                              )
                          );
                      } elseif ( is_singular( 'post' ) ) {
@@ -72,7 +72,7 @@
                              array(
                                  'next_text' => '
                                      <div class="kp-blor-next-box">
-                                         <div class="kp-blog-pre-arrow">'. __( 'Next', 'kepya' ) .'<i class="fa fa-long-arrow-right" aria-hidden="true"></i></div>'.
+                                         <div class="kp-blog-pre-arrow">'. __( 'Next', 'twentysixteen' ) .'<i class="fa fa-long-arrow-right" aria-hidden="true"></i></div>'.
                                          '<div class="kp-blog-box-next">
                                          <span>'. get_the_post_thumbnail($next_post->ID,array(81,40)).'</span>
                                          <p>%title</p></div></div>',
@@ -81,7 +81,7 @@
                                  'prev_text' => '
                                      <div class="kp-blor-pre-box">
                                      <div class="kp-blog-pre-arrow">
-                                         <i class="fa fa-long-arrow-left" aria-hidden="true"></i>'. __( 'Previous', 'kepya' ). '</div>'.
+                                         <i class="fa fa-long-arrow-left" aria-hidden="true"></i>'. __( 'Previous', 'twentysixteen' ). '</div>'.
                                      '<div class="kp-blog-box-pre">
                                      <span>'. get_the_post_thumbnail($previous_post->ID,array(81,40)).'</span>' .
                                      '<p>%title</p></div></div>',

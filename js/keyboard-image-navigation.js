@@ -3,7 +3,7 @@
  */
 
 ( function( $ ) {
-	$( document ).on( 'keydown.kepya', function( e ) {
+	$( document ).on( 'keydown.twentysixteen', function( e ) {
 		var url = false;
 
 		// Left arrow key code.
