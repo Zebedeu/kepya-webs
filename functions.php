@@ -49,9 +49,9 @@ if ( ! function_exists( 'twentysixteen_setup' ) ) :
 		 * Make theme available for translation.
 		 * Translations can be filed at WordPress.org. See: https://translate.wordpress.org/projects/wp-themes/twentysixteen
 		 * If you're building a theme based on Twenty Sixteen, use a find and replace
-		 * to change 'twentysixteen' to the name of your theme in all the template files
+		 * to change 'kepya' to the name of your theme in all the template files
 		 */
-		load_theme_textdomain( 'twentysixteen' );
+		load_theme_textdomain( 'kepya' );
 
 		// Add default posts and comments RSS feed links to head.
 		add_theme_support( 'automatic-feed-links' );
@@ -89,8 +89,8 @@ if ( ! function_exists( 'twentysixteen_setup' ) ) :
 		// This theme uses wp_nav_menu() in two locations.
 		register_nav_menus(
 			array(
-				'primary' => __( 'Primary Menu', 'twentysixteen' ),
-				'social'  => __( 'Social Links Menu', 'twentysixteen' ),
+				'primary' => __( 'Primary Menu', 'kepya' ),
+				'social'  => __( 'Social Links Menu', 'kepya' ),
 			)
 		);
 
@@ -151,62 +151,62 @@ if ( ! function_exists( 'twentysixteen_setup' ) ) :
 			'editor-color-palette',
 			array(
 				array(
-					'name'  => __( 'Dark Gray', 'twentysixteen' ),
+					'name'  => __( 'Dark Gray', 'kepya' ),
 					'slug'  => 'dark-gray',
 					'color' => '#1a1a1a',
 				),
 				array(
-					'name'  => __( 'Medium Gray', 'twentysixteen' ),
+					'name'  => __( 'Medium Gray', 'kepya' ),
 					'slug'  => 'medium-gray',
 					'color' => '#686868',
 				),
 				array(
-					'name'  => __( 'Light Gray', 'twentysixteen' ),
+					'name'  => __( 'Light Gray', 'kepya' ),
 					'slug'  => 'light-gray',
 					'color' => '#e5e5e5',
 				),
 				array(
-					'name'  => __( 'White', 'twentysixteen' ),
+					'name'  => __( 'White', 'kepya' ),
 					'slug'  => 'white',
 					'color' => '#fff',
 				),
 				array(
-					'name'  => __( 'Blue Gray', 'twentysixteen' ),
+					'name'  => __( 'Blue Gray', 'kepya' ),
 					'slug'  => 'blue-gray',
 					'color' => '#4d545c',
 				),
 				array(
-					'name'  => __( 'Bright Blue', 'twentysixteen' ),
+					'name'  => __( 'Bright Blue', 'kepya' ),
 					'slug'  => 'bright-blue',
 					'color' => '#007acc',
 				),
 				array(
-					'name'  => __( 'Light Blue', 'twentysixteen' ),
+					'name'  => __( 'Light Blue', 'kepya' ),
 					'slug'  => 'light-blue',
 					'color' => '#9adffd',
 				),
 				array(
-					'name'  => __( 'Dark Brown', 'twentysixteen' ),
+					'name'  => __( 'Dark Brown', 'kepya' ),
 					'slug'  => 'dark-brown',
 					'color' => '#402b30',
 				),
 				array(
-					'name'  => __( 'Medium Brown', 'twentysixteen' ),
+					'name'  => __( 'Medium Brown', 'kepya' ),
 					'slug'  => 'medium-brown',
 					'color' => '#774e24',
 				),
 				array(
-					'name'  => __( 'Dark Red', 'twentysixteen' ),
+					'name'  => __( 'Dark Red', 'kepya' ),
 					'slug'  => 'dark-red',
 					'color' => '#640c1f',
 				),
 				array(
-					'name'  => __( 'Bright Red', 'twentysixteen' ),
+					'name'  => __( 'Bright Red', 'kepya' ),
 					'slug'  => 'bright-red',
 					'color' => '#ff675f',
 				),
 				array(
-					'name'  => __( 'Yellow', 'twentysixteen' ),
+					'name'  => __( 'Yellow', 'kepya' ),
 					'slug'  => 'yellow',
 					'color' => '#ffef8e',
 				),
@@ -264,9 +264,9 @@ add_filter( 'wp_resource_hints', 'twentysixteen_resource_hints', 10, 2 );
 function twentysixteen_widgets_init() {
 	register_sidebar(
 		array(
-			'name'          => __( 'Sidebar', 'twentysixteen' ),
+			'name'          => __( 'Sidebar', 'kepya' ),
 			'id'            => 'sidebar-1',
-			'description'   => __( 'Add widgets here to appear in your sidebar.', 'twentysixteen' ),
+			'description'   => __( 'Add widgets here to appear in your sidebar.', 'kepya' ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
 			'before_title'  => '<h2 class="widget-title">',
@@ -276,9 +276,9 @@ function twentysixteen_widgets_init() {
 
 	register_sidebar(
 		array(
-			'name'          => __( 'Content Bottom 1', 'twentysixteen' ),
+			'name'          => __( 'Content Bottom 1', 'kepya' ),
 			'id'            => 'sidebar-2',
-			'description'   => __( 'Appears at the footer first section on posts and pages.', 'twentysixteen' ),
+			'description'   => __( 'Appears at the footer first section on posts and pages.', 'kepya' ),
 			'before_widget' => '<div class="footer-data">',
 			'after_widget'  => '</div>',
 			'before_title'  => '<h3>',
@@ -288,17 +288,17 @@ function twentysixteen_widgets_init() {
 
 	register_sidebar(
 		array(
-			'name'          => __( 'Content Bottom 2', 'twentysixteen' ),
+			'name'          => __( 'Content Bottom 2', 'kepya' ),
 			'id'            => 'sidebar-3',
-			'description'   => __( 'Appears at the footer second section on posts and pages.', 'twentysixteen' ),
+			'description'   => __( 'Appears at the footer second section on posts and pages.', 'kepya' ),
 		)
 	);
 
     register_sidebar(
         array(
-            'name'          => __( 'Header Top Nav', 'twentysixteen' ),
+            'name'          => __( 'Header Top Nav', 'kepya' ),
             'id'            => 'sidebar-4',
-            'description'   => __( 'Appears at the header with phone number , login & register link', 'twentysixteen' ),
+            'description'   => __( 'Appears at the header with phone number , login & register link', 'kepya' ),
         )
     );
 }
@@ -323,7 +323,7 @@ if ( ! function_exists( 'twentysixteen_fonts_url' ) ) :
 		 * translators: If there are characters in your language that are not supported
 		 * by Merriweather, translate this to 'off'. Do not translate into your own language.
 		 */
-		if ( 'off' !== _x( 'on', 'Merriweather font: on or off', 'twentysixteen' ) ) {
+		if ( 'off' !== _x( 'on', 'Merriweather font: on or off', 'kepya' ) ) {
 			$fonts[] = 'Merriweather:400,700,900,400italic,700italic,900italic';
 		}
 
@@ -331,7 +331,7 @@ if ( ! function_exists( 'twentysixteen_fonts_url' ) ) :
 		 * translators: If there are characters in your language that are not supported
 		 * by Montserrat, translate this to 'off'. Do not translate into your own language.
 		 */
-		if ( 'off' !== _x( 'on', 'Montserrat font: on or off', 'twentysixteen' ) ) {
+		if ( 'off' !== _x( 'on', 'Montserrat font: on or off', 'kepya' ) ) {
 			$fonts[] = 'Montserrat:400,700';
 		}
 
@@ -339,7 +339,7 @@ if ( ! function_exists( 'twentysixteen_fonts_url' ) ) :
 		 * translators: If there are characters in your language that are not supported
 		 * by Inconsolata, translate this to 'off'. Do not translate into your own language.
 		 */
-		if ( 'off' !== _x( 'on', 'Inconsolata font: on or off', 'twentysixteen' ) ) {
+		if ( 'off' !== _x( 'on', 'Inconsolata font: on or off', 'kepya' ) ) {
 			$fonts[] = 'Inconsolata:400';
 		}
 
@@ -433,8 +433,8 @@ function twentysixteen_scripts() {
 		'twentysixteen-script',
 		'screenReaderText',
 		array(
-			'expand'   => __( 'expand child menu', 'twentysixteen' ),
-			'collapse' => __( 'collapse child menu', 'twentysixteen' ),
+			'expand'   => __( 'expand child menu', 'kepya' ),
+			'collapse' => __( 'collapse child menu', 'kepya' ),
 		)
 	);
 }

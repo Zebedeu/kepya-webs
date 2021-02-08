@@ -18,7 +18,7 @@ get_header(); ?>
 				<h1 class="page-title">
 				<?php
 				/* translators: %s: The search query. */
-				printf( __( 'Search Results for: %s', 'twentysixteen' ), '<span>' . esc_html( get_search_query() ) . '</span>' );
+				printf( __( 'Search Results for: %s', 'kepya' ), '<span>' . esc_html( get_search_query() ) . '</span>' );
 				?>
 				</h1>
 			</header><!-- .page-header -->
@@ -41,9 +41,9 @@ get_header(); ?>
 			// Previous/next page navigation.
 			the_posts_pagination(
 				array(
-					'prev_text'          => __( 'Previous page', 'twentysixteen' ),
-					'next_text'          => __( 'Next page', 'twentysixteen' ),
-					'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'twentysixteen' ) . ' </span>',
+					'prev_text'          => __( 'Previous page', 'kepya' ),
+					'next_text'          => __( 'Next page', 'kepya' ),
+					'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'kepya' ) . ' </span>',
 				)
 			);
 
