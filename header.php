@@ -52,10 +52,12 @@
                             <ul class="topnav" id="myTopnav">
                                 
                                 <?php 
-                                    if(pll_current_language() == 'en'){
-                                        echo do_shortcode('[sc name="EN Header Phone section"]');
-                                    }else{
+                                    if(pll_current_language() == 'pt'){
                                         echo do_shortcode('[sc name="PT Header Phone section"]');
+
+                                    }else{
+                                        echo do_shortcode('[sc name="EN Header Phone section"]');
+
                                     }
                                 ?>
 
