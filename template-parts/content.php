@@ -11,7 +11,7 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
 		<?php if ( is_sticky() && is_home() && ! is_paged() ) : ?>
-			<span class="sticky-post"><?php _e( 'Featured', 'kepya' ); ?></span>
+			<span class="sticky-post"><?php _e( 'Featured', ' kepya-webs' ); ?></span>
 		<?php endif; ?>
 
 		<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
@@ -26,18 +26,18 @@
 			the_content(
 				sprintf(
 					/* translators: %s: Post title. */
-					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'kepya' ),
+					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', ' kepya-webs' ),
 					get_the_title()
 				)
 			);
 
 			wp_link_pages(
 				array(
-					'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'kepya' ) . '</span>',
+					'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', ' kepya-webs' ) . '</span>',
 					'after'       => '</div>',
 					'link_before' => '<span>',
 					'link_after'  => '</span>',
-					'pagelink'    => '<span class="screen-reader-text">' . __( 'Page', 'kepya' ) . ' </span>%',
+					'pagelink'    => '<span class="screen-reader-text">' . __( 'Page', ' kepya-webs' ) . ' </span>%',
 					'separator'   => '<span class="screen-reader-text">, </span>',
 				)
 			);
@@ -50,7 +50,7 @@
 			edit_post_link(
 				sprintf(
 					/* translators: %s: Post title. */
-					__( 'Edit<span class="screen-reader-text"> "%s"</span>', 'kepya' ),
+					__( 'Edit<span class="screen-reader-text"> "%s"</span>', ' kepya-webs' ),
 					get_the_title()
 				),
 				'<span class="edit-link">',

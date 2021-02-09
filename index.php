@@ -45,9 +45,9 @@ get_header(); ?>
 			// Previous/next page navigation.
 			the_posts_pagination(
 				array(
-					'prev_text'          => __( 'Previous page', 'kepya' ),
-					'next_text'          => __( 'Next page', 'kepya' ),
-					'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'kepya' ) . ' </span>',
+					'prev_text'          => __( 'Previous page', ' kepya-webs' ),
+					'next_text'          => __( 'Next page', ' kepya-webs' ),
+					'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', ' kepya-webs' ) . ' </span>',
 				)
 			);
 

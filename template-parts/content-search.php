@@ -25,7 +25,7 @@
 				edit_post_link(
 					sprintf(
 						/* translators: %s: Post title. */
-						__( 'Edit<span class="screen-reader-text"> "%s"</span>', 'kepya' ),
+						__( 'Edit<span class="screen-reader-text"> "%s"</span>', ' kepya-webs' ),
 						get_the_title()
 					),
 					'<span class="edit-link">',
@@ -40,7 +40,7 @@
 			edit_post_link(
 				sprintf(
 					/* translators: %s: Post title. */
-					__( 'Edit<span class="screen-reader-text"> "%s"</span>', 'kepya' ),
+					__( 'Edit<span class="screen-reader-text"> "%s"</span>', ' kepya-webs' ),
 					get_the_title()
 				),
 				'<footer class="entry-footer"><span class="edit-link">',

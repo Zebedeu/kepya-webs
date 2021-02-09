@@ -150,7 +150,7 @@ function twentysixteen_customize_register( $wp_customize ) {
 	$wp_customize->add_control(
 		'color_scheme',
 		array(
-			'label'    => __( 'Base Color Scheme', 'kepya' ),
+			'label'    => __( 'Base Color Scheme', ' kepya-webs' ),
 			'section'  => 'colors',
 			'type'     => 'select',
 			'choices'  => twentysixteen_get_color_scheme_choices(),
@@ -173,7 +173,7 @@ function twentysixteen_customize_register( $wp_customize ) {
 			$wp_customize,
 			'page_background_color',
 			array(
-				'label'   => __( 'Page Background Color', 'kepya' ),
+				'label'   => __( 'Page Background Color', ' kepya-webs' ),
 				'section' => 'colors',
 			)
 		)
@@ -197,7 +197,7 @@ function twentysixteen_customize_register( $wp_customize ) {
 			$wp_customize,
 			'link_color',
 			array(
-				'label'   => __( 'Link Color', 'kepya' ),
+				'label'   => __( 'Link Color', ' kepya-webs' ),
 				'section' => 'colors',
 			)
 		)
@@ -218,7 +218,7 @@ function twentysixteen_customize_register( $wp_customize ) {
 			$wp_customize,
 			'main_text_color',
 			array(
-				'label'   => __( 'Main Text Color', 'kepya' ),
+				'label'   => __( 'Main Text Color', ' kepya-webs' ),
 				'section' => 'colors',
 			)
 		)
@@ -239,7 +239,7 @@ function twentysixteen_customize_register( $wp_customize ) {
 			$wp_customize,
 			'secondary_text_color',
 			array(
-				'label'   => __( 'Secondary Text Color', 'kepya' ),
+				'label'   => __( 'Secondary Text Color', ' kepya-webs' ),
 				'section' => 'colors',
 			)
 		)
@@ -312,7 +312,7 @@ function twentysixteen_get_color_schemes() {
 		'twentysixteen_color_schemes',
 		array(
 			'default' => array(
-				'label'  => __( 'Default', 'kepya' ),
+				'label'  => __( 'Default', ' kepya-webs' ),
 				'colors' => array(
 					'#1a1a1a',
 					'#ffffff',
@@ -322,7 +322,7 @@ function twentysixteen_get_color_schemes() {
 				),
 			),
 			'dark'    => array(
-				'label'  => __( 'Dark', 'kepya' ),
+				'label'  => __( 'Dark', ' kepya-webs' ),
 				'colors' => array(
 					'#262626',
 					'#1a1a1a',
@@ -332,7 +332,7 @@ function twentysixteen_get_color_schemes() {
 				),
 			),
 			'gray'    => array(
-				'label'  => __( 'Gray', 'kepya' ),
+				'label'  => __( 'Gray', ' kepya-webs' ),
 				'colors' => array(
 					'#616a73',
 					'#4d545c',
@@ -342,7 +342,7 @@ function twentysixteen_get_color_schemes() {
 				),
 			),
 			'red'     => array(
-				'label'  => __( 'Red', 'kepya' ),
+				'label'  => __( 'Red', ' kepya-webs' ),
 				'colors' => array(
 					'#ffffff',
 					'#ff675f',
@@ -352,7 +352,7 @@ function twentysixteen_get_color_schemes() {
 				),
 			),
 			'yellow'  => array(
-				'label'  => __( 'Yellow', 'kepya' ),
+				'label'  => __( 'Yellow', ' kepya-webs' ),
 				'colors' => array(
 					'#3b3721',
 					'#ffef8e',
