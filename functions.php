@@ -49,9 +49,9 @@ if ( ! function_exists( 'twentysixteen_setup', get_template_directory() . "/lang
 		 * Make theme available for translation.
 		 * Translations can be filed at WordPress.org. See: https://translate.wordpress.org/projects/wp-themes/twentysixteen
 		 * If you're building a theme based on Twenty Sixteen, use a find and replace
-		 * to change ' kepya-webs' to the name of your theme in all the template files
+		 * to change 'kepya-webs' to the name of your theme in all the template files
 		 */
-		load_theme_textdomain( ' kepya-webs' );
+		load_theme_textdomain( 'kepya-webs', get_template_directory() . '/languages' );
 
 		// Add default posts and comments RSS feed links to head.
 		add_theme_support( 'automatic-feed-links' );
@@ -89,8 +89,8 @@ if ( ! function_exists( 'twentysixteen_setup', get_template_directory() . "/lang
 		// This theme uses wp_nav_menu() in two locations.
 		register_nav_menus(
 			array(
-				'primary' => __( 'Primary Menu', ' kepya-webs' ),
-				'social'  => __( 'Social Links Menu', ' kepya-webs' ),
+				'primary' => __( 'Primary Menu', 'kepya-webs' ),
+				'social'  => __( 'Social Links Menu', 'kepya-webs' ),
 			)
 		);
 
@@ -151,62 +151,62 @@ if ( ! function_exists( 'twentysixteen_setup', get_template_directory() . "/lang
 			'editor-color-palette',
 			array(
 				array(
-					'name'  => __( 'Dark Gray', ' kepya-webs' ),
+					'name'  => __( 'Dark Gray', 'kepya-webs' ),
 					'slug'  => 'dark-gray',
 					'color' => '#1a1a1a',
 				),
 				array(
-					'name'  => __( 'Medium Gray', ' kepya-webs' ),
+					'name'  => __( 'Medium Gray', 'kepya-webs' ),
 					'slug'  => 'medium-gray',
 					'color' => '#686868',
 				),
 				array(
-					'name'  => __( 'Light Gray', ' kepya-webs' ),
+					'name'  => __( 'Light Gray', 'kepya-webs' ),
 					'slug'  => 'light-gray',
 					'color' => '#e5e5e5',
 				),
 				array(
-					'name'  => __( 'White', ' kepya-webs' ),
+					'name'  => __( 'White', 'kepya-webs' ),
 					'slug'  => 'white',
 					'color' => '#fff',
 				),
 				array(
-					'name'  => __( 'Blue Gray', ' kepya-webs' ),
+					'name'  => __( 'Blue Gray', 'kepya-webs' ),
 					'slug'  => 'blue-gray',
 					'color' => '#4d545c',
 				),
 				array(
-					'name'  => __( 'Bright Blue', ' kepya-webs' ),
+					'name'  => __( 'Bright Blue', 'kepya-webs' ),
 					'slug'  => 'bright-blue',
 					'color' => '#007acc',
 				),
 				array(
-					'name'  => __( 'Light Blue', ' kepya-webs' ),
+					'name'  => __( 'Light Blue', 'kepya-webs' ),
 					'slug'  => 'light-blue',
 					'color' => '#9adffd',
 				),
 				array(
-					'name'  => __( 'Dark Brown', ' kepya-webs' ),
+					'name'  => __( 'Dark Brown', 'kepya-webs' ),
 					'slug'  => 'dark-brown',
 					'color' => '#402b30',
 				),
 				array(
-					'name'  => __( 'Medium Brown', ' kepya-webs' ),
+					'name'  => __( 'Medium Brown', 'kepya-webs' ),
 					'slug'  => 'medium-brown',
 					'color' => '#774e24',
 				),
 				array(
-					'name'  => __( 'Dark Red', ' kepya-webs' ),
+					'name'  => __( 'Dark Red', 'kepya-webs' ),
 					'slug'  => 'dark-red',
 					'color' => '#640c1f',
 				),
 				array(
-					'name'  => __( 'Bright Red', ' kepya-webs' ),
+					'name'  => __( 'Bright Red', 'kepya-webs' ),
 					'slug'  => 'bright-red',
 					'color' => '#ff675f',
 				),
 				array(
-					'name'  => __( 'Yellow', ' kepya-webs' ),
+					'name'  => __( 'Yellow', 'kepya-webs' ),
 					'slug'  => 'yellow',
 					'color' => '#ffef8e',
 				),
@@ -264,9 +264,9 @@ add_filter( 'wp_resource_hints', 'twentysixteen_resource_hints', 10, 2 );
 function twentysixteen_widgets_init() {
 	register_sidebar(
 		array(
-			'name'          => __( 'Sidebar', ' kepya-webs' ),
+			'name'          => __( 'Sidebar', 'kepya-webs' ),
 			'id'            => 'sidebar-1',
-			'description'   => __( 'Add widgets here to appear in your sidebar.', ' kepya-webs' ),
+			'description'   => __( 'Add widgets here to appear in your sidebar.', 'kepya-webs' ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
 			'before_title'  => '<h2 class="widget-title">',
@@ -276,9 +276,9 @@ function twentysixteen_widgets_init() {
 
 	register_sidebar(
 		array(
-			'name'          => __( 'Content Bottom 1', ' kepya-webs' ),
+			'name'          => __( 'Content Bottom 1', 'kepya-webs' ),
 			'id'            => 'sidebar-2',
-			'description'   => __( 'Appears at the footer first section on posts and pages.', ' kepya-webs' ),
+			'description'   => __( 'Appears at the footer first section on posts and pages.', 'kepya-webs' ),
 			'before_widget' => '<div class="footer-data">',
 			'after_widget'  => '</div>',
 			'before_title'  => '<h3>',
@@ -288,17 +288,17 @@ function twentysixteen_widgets_init() {
 
 	register_sidebar(
 		array(
-			'name'          => __( 'Content Bottom 2', ' kepya-webs' ),
+			'name'          => __( 'Content Bottom 2', 'kepya-webs' ),
 			'id'            => 'sidebar-3',
-			'description'   => __( 'Appears at the footer second section on posts and pages.', ' kepya-webs' ),
+			'description'   => __( 'Appears at the footer second section on posts and pages.', 'kepya-webs' ),
 		)
 	);
 
     register_sidebar(
         array(
-            'name'          => __( 'Header Top Nav', ' kepya-webs' ),
+            'name'          => __( 'Header Top Nav', 'kepya-webs' ),
             'id'            => 'sidebar-4',
-            'description'   => __( 'Appears at the header with phone number , login & register link', ' kepya-webs' ),
+            'description'   => __( 'Appears at the header with phone number , login & register link', 'kepya-webs' ),
         )
     );
 }
@@ -323,7 +323,7 @@ if ( ! function_exists( 'twentysixteen_fonts_url' ) ) :
 		 * translators: If there are characters in your language that are not supported
 		 * by Merriweather, translate this to 'off'. Do not translate into your own language.
 		 */
-		if ( 'off' !== _x( 'on', 'Merriweather font: on or off', ' kepya-webs' ) ) {
+		if ( 'off' !== _x( 'on', 'Merriweather font: on or off', 'kepya-webs' ) ) {
 			$fonts[] = 'Merriweather:400,700,900,400italic,700italic,900italic';
 		}
 
@@ -331,7 +331,7 @@ if ( ! function_exists( 'twentysixteen_fonts_url' ) ) :
 		 * translators: If there are characters in your language that are not supported
 		 * by Montserrat, translate this to 'off'. Do not translate into your own language.
 		 */
-		if ( 'off' !== _x( 'on', 'Montserrat font: on or off', ' kepya-webs' ) ) {
+		if ( 'off' !== _x( 'on', 'Montserrat font: on or off', 'kepya-webs' ) ) {
 			$fonts[] = 'Montserrat:400,700';
 		}
 
@@ -339,7 +339,7 @@ if ( ! function_exists( 'twentysixteen_fonts_url' ) ) :
 		 * translators: If there are characters in your language that are not supported
 		 * by Inconsolata, translate this to 'off'. Do not translate into your own language.
 		 */
-		if ( 'off' !== _x( 'on', 'Inconsolata font: on or off', ' kepya-webs' ) ) {
+		if ( 'off' !== _x( 'on', 'Inconsolata font: on or off', 'kepya-webs' ) ) {
 			$fonts[] = 'Inconsolata:400';
 		}
 
@@ -433,8 +433,8 @@ function twentysixteen_scripts() {
 		'twentysixteen-script',
 		'screenReaderText',
 		array(
-			'expand'   => __( 'expand child menu', ' kepya-webs' ),
-			'collapse' => __( 'collapse child menu', ' kepya-webs' ),
+			'expand'   => __( 'expand child menu', 'kepya-webs' ),
+			'collapse' => __( 'collapse child menu', 'kepya-webs' ),
 		)
 	);
 }

@@ -22,8 +22,8 @@ get_header(); ?>
 
 				<nav id="image-navigation" class="navigation image-navigation">
 					<div class="nav-links">
-						<div class="nav-previous"><?php previous_image_link( false, __( 'Previous Image', ' kepya-webs' ) ); ?></div>
-						<div class="nav-next"><?php next_image_link( false, __( 'Next Image', ' kepya-webs' ) ); ?></div>
+						<div class="nav-previous"><?php previous_image_link( false, __( 'Previous Image', 'kepya-webs' ) ); ?></div>
+						<div class="nav-next"><?php next_image_link( false, __( 'Next Image', 'kepya-webs' ) ); ?></div>
 					</div><!-- .nav-links -->
 				</nav><!-- .image-navigation -->
 
@@ -55,11 +55,11 @@ get_header(); ?>
 						the_content();
 						wp_link_pages(
 							array(
-								'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', ' kepya-webs' ) . '</span>',
+								'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'kepya-webs' ) . '</span>',
 								'after'       => '</div>',
 								'link_before' => '<span>',
 								'link_after'  => '</span>',
-								'pagelink'    => '<span class="screen-reader-text">' . __( 'Page', ' kepya-webs' ) . ' </span>%',
+								'pagelink'    => '<span class="screen-reader-text">' . __( 'Page', 'kepya-webs' ) . ' </span>%',
 								'separator'   => '<span class="screen-reader-text">, </span>',
 							)
 						);
@@ -74,7 +74,7 @@ get_header(); ?>
 						if ( $metadata ) {
 							printf(
 								'<span class="full-size-link"><span class="screen-reader-text">%1$s </span><a href="%2$s">%3$s &times; %4$s</a></span>',
-								esc_html_x( 'Full size', 'Used before full size attachment link.', ' kepya-webs' ),
+								esc_html_x( 'Full size', 'Used before full size attachment link.', 'kepya-webs' ),
 								esc_url( wp_get_attachment_url() ),
 								absint( $metadata['width'] ),
 								absint( $metadata['height'] )
@@ -85,7 +85,7 @@ get_header(); ?>
 						edit_post_link(
 							sprintf(
 								/* translators: %s: Post title. */
-								__( 'Edit<span class="screen-reader-text"> "%s"</span>', ' kepya-webs' ),
+								__( 'Edit<span class="screen-reader-text"> "%s"</span>', 'kepya-webs' ),
 								get_the_title()
 							),
 							'<span class="edit-link">',
@@ -104,7 +104,7 @@ get_header(); ?>
 				// Parent post navigation.
 				the_post_navigation(
 					array(
-						'prev_text' => _x( '<span class="meta-nav">Published in</span><span class="post-title">%title</span>', 'Parent post link', ' kepya-webs' ),
+						'prev_text' => _x( '<span class="meta-nav">Published in</span><span class="post-title">%title</span>', 'Parent post link', 'kepya-webs' ),
 					)
 				);
 				// End the loop.

@@ -23,7 +23,7 @@ if ( ! function_exists( 'twentysixteen_entry_meta' ) ) :
 			printf(
 				'<span class="byline"><span class="author vcard">%1$s<span class="screen-reader-text">%2$s </span> <a class="url fn n" href="%3$s">%4$s</a></span></span>',
 				get_avatar( get_the_author_meta( 'user_email' ), $author_avatar_size ),
-				_x( 'Author', 'Used before post author name.', ' kepya-webs' ),
+				_x( 'Author', 'Used before post author name.', 'kepya-webs' ),
 				esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
 				get_the_author()
 			);
@@ -37,7 +37,7 @@ if ( ! function_exists( 'twentysixteen_entry_meta' ) ) :
 		if ( current_theme_supports( 'post-formats', $format ) ) {
 			printf(
 				'<span class="entry-format">%1$s<a href="%2$s">%3$s</a></span>',
-				sprintf( '<span class="screen-reader-text">%s </span>', _x( 'Format', 'Used before post format.', ' kepya-webs' ) ),
+				sprintf( '<span class="screen-reader-text">%s </span>', _x( 'Format', 'Used before post format.', 'kepya-webs' ) ),
 				esc_url( get_post_format_link( $format ) ),
 				get_post_format_string( $format )
 			);
@@ -50,7 +50,7 @@ if ( ! function_exists( 'twentysixteen_entry_meta' ) ) :
 		if ( ! is_singular() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
 			echo '<span class="comments-link">';
 			/* translators: %s: Post title. */
-			comments_popup_link( sprintf( __( 'Leave a comment<span class="screen-reader-text"> on %s</span>', ' kepya-webs' ), get_the_title() ) );
+			comments_popup_link( sprintf( __( 'Leave a comment<span class="screen-reader-text"> on %s</span>', 'kepya-webs' ), get_the_title() ) );
 			echo '</span>';
 		}
 	}
@@ -81,7 +81,7 @@ if ( ! function_exists( 'twentysixteen_entry_date' ) ) :
 
 		printf(
 			'<span class="posted-on"><span class="screen-reader-text">%1$s </span><a href="%2$s" rel="bookmark">%3$s</a></span>',
-			_x( 'Posted on', 'Used before publish date.', ' kepya-webs' ),
+			_x( 'Posted on', 'Used before publish date.', 'kepya-webs' ),
 			esc_url( get_permalink() ),
 			$time_string
 		);
@@ -97,20 +97,20 @@ if ( ! function_exists( 'twentysixteen_entry_taxonomies' ) ) :
 	 * @since Twenty Sixteen 1.0
 	 */
 	function twentysixteen_entry_taxonomies() {
-		$categories_list = get_the_category_list( _x( ', ', 'Used between list items, there is a space after the comma.', ' kepya-webs' ) );
+		$categories_list = get_the_category_list( _x( ', ', 'Used between list items, there is a space after the comma.', 'kepya-webs' ) );
 		if ( $categories_list && twentysixteen_categorized_blog() ) {
 			printf(
 				'<span class="cat-links"><span class="screen-reader-text">%1$s </span>%2$s</span>',
-				_x( 'Categories', 'Used before category names.', ' kepya-webs' ),
+				_x( 'Categories', 'Used before category names.', 'kepya-webs' ),
 				$categories_list
 			);
 		}
 
-		$tags_list = get_the_tag_list( '', _x( ', ', 'Used between list items, there is a space after the comma.', ' kepya-webs' ) );
+		$tags_list = get_the_tag_list( '', _x( ', ', 'Used between list items, there is a space after the comma.', 'kepya-webs' ) );
 		if ( $tags_list && ! is_wp_error( $tags_list ) ) {
 			printf(
 				'<span class="tags-links"><span class="screen-reader-text">%1$s </span>%2$s</span>',
-				_x( 'Tags', 'Used before tag names.', ' kepya-webs' ),
+				_x( 'Tags', 'Used before tag names.', 'kepya-webs' ),
 				$tags_list
 			);
 		}
@@ -192,7 +192,7 @@ if ( ! function_exists( 'twentysixteen_excerpt_more' ) && ! is_admin() ) :
 			'<a href="%1$s" class="more-link">%2$s</a>',
 			esc_url( get_permalink( get_the_ID() ) ),
 			/* translators: %s: Post title. */
-			sprintf( __( 'Continue reading<span class="screen-reader-text"> "%s"</span>', ' kepya-webs' ), get_the_title( get_the_ID() ) )
+			sprintf( __( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'kepya-webs' ), get_the_title( get_the_ID() ) )
 		);
 		return ' &hellip; ' . $link;
 	}
