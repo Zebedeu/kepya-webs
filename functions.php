@@ -32,7 +32,6 @@ if ( version_compare( $GLOBALS['wp_version'], '4.4-alpha', '<' ) ) {
 	require get_template_directory() . '/inc/back-compat.php';
 }
 
-if ( ! function_exists( 'twentysixteen_setup', get_template_directory() . "/languages" ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
 	 *
@@ -216,7 +215,7 @@ if ( ! function_exists( 'twentysixteen_setup', get_template_directory() . "/lang
 		// Indicate widget sidebars can use selective refresh in the Customizer.
 		add_theme_support( 'customize-selective-refresh-widgets' );
 	}
-endif; // twentysixteen_setup
+
 add_action( 'after_setup_theme', 'twentysixteen_setup' );
 
 /**
